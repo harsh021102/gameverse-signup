@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;800&display=swap');
+.bckground{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(-45deg,hsl(233, 47%, 0%),hsl(233, 47%, 20%),hsl(233, 47%,50%),hsl(233, 47%, 25%),hsl(233, 47%, 1%));
+    background-size: 400% 400%;
+    font-family: 'Outfit', sans-serif;
+    animation: change 7s ease-in-out infinite;
+    /* border: 1px solid red; */
+}
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.container{
+    /* border: 1px solid red; */
+    min-width: 30%;
+    min-height: 90%;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+@media (max-width:980px) {
+    .container{
+        /* border: 1px solid red; */
+        min-width: 70%;
+        min-height: 90%;
+    }
+    .signin__card .signin__text{
+        font-size: .5em;
+        font-weight: 400;
+        color: white;
+    }
+}
+.signin__card{
+    /* border: 1px solid green; */
+    display: flex;
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 1rem; */
+    align-items: center;
+}
+.signin__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid white; */
+}
+.signin__card .logo{
+    font-size: 2em;
+    color: white;
+    font-weight: 800;
+}
+.signin__card .signin__text{
+    font-size: 1.5em;
+    font-weight: 400;
+    color: white;
+}
+.signin__card .signin__text a{
+    color: white;
+}
+.signin__inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .5rem;
+    /* gap: 3rem; */
+    padding: 3% 0;
+    /* border: 1px solid red; */
+}
+.signin__inputs .firstname,.lastname,.username,.password,.email{
+    width: 90%;
+    /* margin-left: 10px; */
+    padding: 0 10px ;
+    font-size: 1em;
+    height: 3.5rem;
+    outline: none;
+    border-radius: 8px;
+    color: white;
+    background-color: hsl(233, 47%, 13%);
+    border: 1px solid white;
+}
+.signin__inputs label{
+    /* border: 1px solid red; */
+    width: 90%;
+    font-size: 1.2em;
+    color:white;
+}
+.signin__inputs label input[type=checkbox]{
+    transform: scale(1.5);
+}
+.signin__inputs .username::placeholder,.email::placeholder,.firstname::placeholder,.lastname::placeholder,.password::placeholder{
+    color: white;
+    font-weight: 200;
+}
+.signin__inputs .username:focus::placeholder,.password:focus::placeholder{
+    color: white;
+}
+.signin__card .login__button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* border: 1px solid red; */
+    padding: 5% 0;
+}
+.signin__card .login__button .log__in{
+    width: 80%;
+    /* border: 2px solid hsl(233, 47%, 7%); */
+    font-size: 1.5em;
+    padding: 9px;
+    background-color: hsl(233, 47%, 13%);
+    border: none;
+    color: white;
+    font-weight: 200;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+}
+.signin__card .login__button .log__in:hover{
+    transform: scale(1.05);
+    background-color:hsl(233, 47%, 20%);
+    cursor: pointer;
+}
+.signin__card .login__button .facebook:hover{
+    background-color: #3b5998;
+}
+.signin__card .login__button .twitter:hover{
+    background-color: #1DA1F2;
+}
